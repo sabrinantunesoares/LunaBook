@@ -1,0 +1,62 @@
+
+
+body {
+    background-color: #fcf3e3; 
+    background-image: radial-gradient(gray 10%, transparent 11%);
+    background-size: 20px 20px;
+    width: 100%; /* O elemento ocupa 100% da largura da janela */
+    height: 100%; /* O elemento ocupa 100% da altura da janela */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens */
+    align-items: center; /* Alinha verticalmente */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #fcf3e3; 
+    color: #013d5a; 
+    font-family: 'Caveat', cursive;
+    border-color: #013d5a;
+    box-shadow: 3px 3px 4px #c3bfc3;
+}
+
+/* Logo e Nome */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+   
+}
+
+.logo img {
+    width: 90px; /* Tamanho da logo */
+   
+    margin-right: 10px; /* Espaço entre logo e nome */
+}
+
+.logo h1 {
+    font-size: 34px; /* Tamanho do nome */
+    margin: 0;
+}
+
+/* Menu à direita */
+.menu {
+    display: flex;
+    gap: 120px; /* Espaçamento entre os itens do menu */
+    margin-right: 50px;
+  
+}
+
+.menu a {
+    color: #013d5a; ;
+    text-decoration: none;
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #f4a258; /* Cor ao passar o mouse */
+}
+
