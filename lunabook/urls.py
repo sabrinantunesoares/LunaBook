@@ -4,6 +4,5 @@ from leitura import views  # Importando a view corretamente
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   
-    path('', views.IndexView.as_view(), name='index'),
+    path('', include('leitura.urls')),
 ]

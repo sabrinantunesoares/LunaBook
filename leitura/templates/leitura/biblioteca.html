@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblioteca</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'leitura/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div class="logo">
+            <img src="{% static 'leitura/images/logon.png' %}" alt="Logo" class="logo-1">
+            <h1>LunaBook</h1>
+        </div>
+
+        
+        <nav class="menu">
+            <a href="{% url 'index' %}" class="nav_link">
+                <i class="fa-solid fa-circle-user"></i>
+                  <span class="nav_name">Inicio</span>
+            </a>
+            <a href="{% url 'biblioteca' %}" class="nav_link" style="color: #f4a258;">
+                <i class="fa-solid fa-circle-user"></i>
+                  <span class="nav_name">Biblioteca</span>
+            </a>
+            <a href="{% url 'historico' %}" class="nav_link">
+                <i class="fa-solid fa-circle-user"></i>
+                  <span class="nav_name">Histórico</span>
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Primeira linha com 2 colunas -->
+        <div class="item">
+            <div class="titulo"> 
+                <h1>Livros na estante</h1>
+            </div>
+
+        
+            <div class="livros-container">
+                {% if livros %}
+                    <ul>
+                        {% for livro in livros %}
+                            <li class="livro-item">
+                                <div class="livro-info">
+                                    <h3>{{ livro.titulo }}</h3>
+                                    <p><strong>Autor:</strong> {{ livro.autor }}</p>
+                                    {% if livro.capa %}
+                                        <img src="{{ livro.capa.url }}" alt="Capa do livro" style="width: 100px; height: auto;">
+                                    {% else %}
+                                        <p>Sem capa disponível</p>
+                                    {% endif %}
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Não há livros na estante.</p>
+                {% endif %}
+            </div>
+
+        <!-- Linhas abaixo -->
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 4</div>
+    </div>
+</body>
+</html>

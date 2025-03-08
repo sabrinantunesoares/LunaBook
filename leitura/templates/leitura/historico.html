@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>histórico</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'leitura/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
 
         
         <nav class="menu">
-            <a href="{% url 'index' %}" class="nav_link" style="color: #f4a258;">
+            <a href="{% url 'index' %}" class="nav_link">
                 <i class="fa-solid fa-circle-user"></i>
                   <span class="nav_name">Inicio</span>
             </a>
@@ -28,13 +28,11 @@
                 <i class="fa-solid fa-circle-user"></i>
                   <span class="nav_name">Biblioteca</span>
             </a>
-            <a href="{% url 'historico' %}" class="nav_link">
+            <a href="{% url 'historico' %}" class="nav_link" style="color: #f4a258;">
                 <i class="fa-solid fa-circle-user"></i>
                   <span class="nav_name">Histórico</span>
             </a>
         </nav>
-
-<body>
-
+    </header>
 </body>
 </html>

@@ -60,3 +60,17 @@ header {
     color: #f4a258; /* Cor ao passar o mouse */
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas na primeira linha */
+    grid-template-rows: auto auto auto; /* Três linhas abaixo */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para cada div */
+.item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+
+}
